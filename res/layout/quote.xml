@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StockQuote" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_marginTop="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tableLayout1" >
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip" >
+
+            <TextView
+                android:id="@+id/textView_code"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingRight="20dip"
+                android:text="Code" />
+
+            <TextView
+                android:id="@+id/textView_codeValue"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:text="Not Available" />
+
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="15dip" >
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingRight="20dip"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textView_nameValue"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:text="Not Available" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="15dip" >
+
+            <TextView
+                android:id="@+id/textView_ask"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingRight="20dip"
+                android:text="Ask Price" />
+
+            <TextView
+                android:id="@+id/textView_askValue"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:text="Not Available" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="15dip" >
+
+            <TextView
+                android:id="@+id/textView_bid"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingRight="20dip"
+                android:text="Bid Price" />
+
+            <TextView
+                android:id="@+id/textView_bidValue"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:text="Not Available" />
+
+        </TableRow>
+
+       <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip"  >
+
+            <TextView
+                android:id="@+id/textView_change"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingRight="20dip"
+                android:text="Change" />
+
+            <TextView
+                android:id="@+id/textView_changeValue"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:text="Not Available" />       
+       
+       </TableRow>
+       
+       <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dip"  >
+            
+	       <EditText
+		        android:id="@+id/editText_stocks"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="5dp"
+		        android:layout_weight="1"
+		        android:ems="8"
+		        android:inputType="number" >
+		    </EditText>
+
+	       <Button
+	           android:id="@+id/button_addStock"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_weight=".5"
+	           android:text="Add" />
+
+		</TableRow>
+		
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView_yahoo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:text="Values taken real time from Yahoo! Finance"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView_yahoo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="113dp"
+        android:text="Add to Portfolio" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView_yahoo"
+        android:layout_alignParentRight="true"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/button_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView_yahoo"
+        android:layout_alignParentLeft="true"
+        android:text="Company News" />
+
+</RelativeLayout>
